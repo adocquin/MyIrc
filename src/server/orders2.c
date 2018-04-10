@@ -49,7 +49,7 @@ int	privmsg(const char** const cmd, const unsigned int fd,
   if (!e || (cmd[0] && my_compare_tab(cmd[0], "PRIVMSG") != 0))
     return (0);
   if ((!cmd[1] && write_socket(fd, ERR_RECIP, fd_write) == -1)
-      || (cmd[1] && !cmd[2] && write_socket(fd, ERR_TEXT, fd_write)) == -1)
+      || ((cmd[1] && !cmd[2]) && write_socket(fd, ERR_TEXT, fd_write) == -1))
     return (-1);
   i = -1;
   if (cmd[1] && cmd[2])
