@@ -1,6 +1,7 @@
 # MyIrc
 ## Introduction
-IRC client and server compliant with RFC 1459. Project realized during my 2nd year at Epitech.  
+IRC client and server compliant with RFC 1459.  
+It is a 2nd year project at Epitech.
 
 ## Build
 The client and the server can be built with the command `make re`, it become `client` and `server`.
